@@ -1,17 +1,19 @@
 {
-  "name": "reactutils",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@shmielminz/reactutils",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build && npx tsc --project tsconfig.json",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.5",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
@@ -24,5 +26,22 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
-  }
+  },
+  "description": "Reusable React code for fetching data and managing logins",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shmielminz/ReactUtils.git"
+  },
+  "keywords": [],
+  "author": "Shmiel Minz",
+  "license": "MIT"
 }
